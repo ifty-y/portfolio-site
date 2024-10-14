@@ -1,11 +1,14 @@
 "use client"
 import Sidebar from "@/components/Sidebar";
+import Providers from "@/components/providers";
 
 export default function RootLayout({ children }) {
 	return (
 		<>
-			<Sidebar />
-			{children}
+		  <Sidebar />
+		  <Providers> {/* Wrap the entire app */}
+            {children}
+          </Providers>
 		</>
 	);
 }

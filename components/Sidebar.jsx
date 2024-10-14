@@ -1,19 +1,29 @@
 "use client";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faHome,
 	faUser,
 	faFolderOpen,
 	faEnvelope,
+	faToggleOn,
+	faToggleOff,
 } from "@fortawesome/free-solid-svg-icons";
 
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTheme } from "next-themes";
 
 const Sidebar = () => {
+	const { theme, setTheme } = useTheme();
+
+	const toggleTheme = () => {
+		setTheme(theme === 'dark' ? 'light' : 'dark');
+	};
+
 	const handleMoveToSection = (index) => {
 		fullpage_api.moveTo(index);
 		fullpage_api.getActiveSection();
 	};
-
+	
 	const containIsActive = (index) => {
 		if (fullpage_api.getActiveSection().index === index) {
 			return "bg-gray-500";
@@ -47,6 +57,14 @@ const Sidebar = () => {
 					<button onClick={() => handleMoveToSection(4)}>
 						<FontAwesomeIcon
 							icon={faEnvelope}
+							className="text-xl"
+						/>
+					</button>
+				</li>
+				<li>
+					<button onClick={() => toggleTheme()}>
+						<FontAwesomeIcon
+							icon={theme === 'dark' ? faToggleOff : faToggleOn}
 							className="text-xl"
 						/>
 					</button>

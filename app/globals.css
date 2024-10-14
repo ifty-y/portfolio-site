@@ -1,5 +1,4 @@
 /* font */
-
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
@@ -7,97 +6,114 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define light theme variables */
+:root {
+    --background-color: #e7e7e7; /* Light theme background */
+    --text-color: #292929; /* Light theme text color */
+}
+
+/* Define dark theme variables */
+[data-theme="dark"] {
+    --background-color: #3f3f3f; /* Dark theme background */
+    --text-color: #ffffff; /* Dark theme text color */
+}
+
+/* Apply the theme styles */
+body {
+    background-color: var(--bg-color);
+  color: var(--text-color);
+    font-family: 'Poppins', sans-serif !important;
+}
+
 html {
-	font-size: 17px !important;
+    font-size: 17px !important;
 }
 
 @media (max-width: 1268px) {
-	html {
-		font-size: 14px !important;
-	}
+    html {
+        font-size: 14px !important;
+    }
 }
 
 @media (max-width: 768px) {
-	html {
-		font-size: 13px !important;
-	}
-}
-
-body {
-	font-family: 'Poppins', sans-serif !important;
-	color: black;
-	background-color: rgb(230, 230, 230);
+    html {
+        font-size: 13px !important;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Jost', sans-serif !important;
+    font-family: 'Jost', sans-serif !important;
+    color: var(--text-color); /* Ensure heading colors follow the theme */
 }
 
 .title {
-	font-family: 'Jost', sans-serif !important;
+    font-family: 'Jost', sans-serif !important;
+    color: var(--text-color); /* Ensure title colors follow the theme */
 }
 
 .section {
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar {
-	z-index: 49 !important;
+    z-index: 49 !important;
 }
 
 .fp-watermark {
-	display: none !important;
+    display: none !important;
 }
 
-
 h2, h3, h4, h5, h6 {
-	@apply text-gray-600;
+    @apply text-gray-600;
+    color: var(--text-color); /* Ensure subheading colors follow the theme */
 }
 
 span {
-	font-family: "Jost", sans-serif;
+    font-family: "Jost", sans-serif;
+    color: var(--text-color); /* Ensure span colors follow the theme */
 }
 
 li {
-	@apply list-none relative;
+    @apply list-none relative;
 }
 li.active:after {
-	content: "";
-	position: absolute;
-	bottom: -5px;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background-color: #ffffff;
-	
-
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff; /* Consider using a theme variable */
 }
 
 td, th {
-	@apply py-2 px-3;
+    @apply py-2 px-3;
+    color: var(--text-color); /* Ensure table cell colors follow the theme */
 }
 
-
 a[title]:hover:after {
-	margin-left: -100px;
-	margin-top: -50px;
-	position: absolute;
-	content: attr(title);
-	padding: 0.5rem;
-	white-space: nowrap;
-	z-index: 1;
-	background-color: #333333;
-	color: #fff;
-	border-radius: 4px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	font-size: 0.8rem;
-
+    margin-left: -100px;
+    margin-top: -50px;
+    position: absolute;
+    content: attr(title);
+    padding: 0.5rem;
+    white-space: nowrap;
+    z-index: 1;
+    background-color: #333333; /* Consider using a theme variable */
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 0.8rem;
 }
 
 ::selection {
-	background: #333333;
-	color: #fff;
+    background: #494949; /* Consider using a theme variable */
+    color: #fff;
+}
+
+.text-theme {
+    color: var(--text-color);
 }

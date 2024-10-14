@@ -3,6 +3,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import Image from "next/legacy/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 // components
 import Button from "@/components/Button";
@@ -30,6 +31,8 @@ const MyPage = () => {
 		lockAnchors: false,
 	};
 
+	const { theme } = useTheme();
+
 	return (
 		<div>
 			<ReactFullpage
@@ -56,7 +59,7 @@ const MyPage = () => {
 											/>
 										</div>
 									</div>
-									<motion.h3
+									<motion.h2
 										className="uppercase text-xl mb-3 font-normal text tracking-[.5rem] text-gray-500"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
@@ -64,16 +67,17 @@ const MyPage = () => {
 											delay: 0.2,
 											type: "spring",
 										}}>
-										Iftekhar Ahmed Ifty
-									</motion.h3>
+										Iftekhar Ahmed
+									</motion.h2>
 									<motion.h1
-										className="text-black text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold my-2 md:my-5"
+										className={`${theme === "dark" ? "text-white" : "text-black"} text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold my-2 md:my-5`}
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
 											delay: 0.3,
 											type: "spring",
-										}}>
+										}}
+										>
 										Mechanical Engineer
 									</motion.h1>
 									<motion.p
@@ -163,18 +167,19 @@ const MyPage = () => {
 								</div>
 								<div className="z-10 w-full absolute md:w-auto md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
 									<motion.h1
-										className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold"
+										// className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold"
+										className={`${theme === "dark" ? "text-white" : "text-black"} bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold`}
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
 											delay: 0.1,
 											type: "spring",
 										}}>
-										About Ifty
+										About Ahmed
 									</motion.h1>
 									<Hr />
 									<motion.p
-										className="title text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] mb-5"
+										className={`${theme === "dark" ? "text-white" : "text-black"} title text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem] mb-5`}
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -233,14 +238,14 @@ const MyPage = () => {
 								</div>
 								<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
 									<motion.h1
-										className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold"
+										className={`${theme === "dark" ? "text-white" : "text-black"} bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold`}
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
 											delay: 0.1,
 											type: "spring",
 										}}>
-										My Projects
+										Projects
 									</motion.h1>
 									<Hr />
 									<motion.p
@@ -306,7 +311,7 @@ const MyPage = () => {
 								</div>
 								<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 overflow-hidden">
 									<motion.h1
-										className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold mb-3"
+										className={`${theme === "dark" ? "text-white" : "text-black"} bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold mb-3`}
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{

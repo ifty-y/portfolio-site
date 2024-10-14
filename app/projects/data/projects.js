@@ -10,7 +10,7 @@ import NUINO from "@/public/projects/ino/ino1.png";
 
 export const projects = [
 	{
-		title: "Generative Trivia",
+		title: "xyz",
 		desc: "Generative Trivia is a web application that I created using Gemini AI API to generate trivia questions and answers.",
 		year: "2024",
 		tech: "NextJS, Typescript, Gemini AI API, Tailwind CSS, Shadcn UI, Firebase",

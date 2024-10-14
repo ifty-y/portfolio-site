@@ -9,7 +9,7 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 const projects = [
 	{
 		year: "2024",
-		title: "Generative Trivia",
+		title: "xdtyut",
 		tech: "NextJS, Gemini AI, TailwindCSS, ShadcnUI, Firebase",
 		github: "https://github.com/Alvalens/generative-trivia",
 		preview: "https://generative-trivia.vercel.app/",
