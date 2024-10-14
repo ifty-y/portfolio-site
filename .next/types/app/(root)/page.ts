@@ -1,4 +1,4 @@
-// File: C:\E\portfolio-website\Alvalens-porto-2-nextJs\app\(root)\page.jsx
+// File: C:\E\portfolio-website\ifty-portfolio\portfolio-site\app\(root)\page.jsx
 import * as entry from '../../../../app/(root)/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
