@@ -28,7 +28,6 @@ const MyPage = () => {
 		licenseKey: "gplv3-license",
 		menu: "#sidebar",
 		lockAnchors: false,
-		
 	};
 
 	return (
@@ -46,12 +45,12 @@ const MyPage = () => {
 										type: "spring",
 									}}>
 									<div className="block md:hidden col-span-1 mx-auto my-10">
-										<div className="bg-slate-500 rounded-full h-60 w-60 grayscale hover:grayscale-0 transition-all ease duration-300">
+										<div className="bg-slate-500 rounded-full h-60 w-60 transition-all ease duration-300">
 											<Image
 												src={Me}
 												width={500}
 												height={500}
-												className="rounded-full w-full h-full object-cover "
+												className="rounded-full w-full h-full object-cover"
 												alt="Ifty"
 												placeholder="blur"
 											/>
@@ -78,7 +77,7 @@ const MyPage = () => {
 										Mechanical Engineer
 									</motion.h1>
 									<motion.p
-										className="title text-md  2xl:text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem]"
+										className="title text-md 2xl:text-xl mt-4 tracking-wider text-gray-500 leading-[1.7rem]"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -86,8 +85,7 @@ const MyPage = () => {
 											type: "spring",
 										}}>
 										A mechanical engineering final year student in Islamic University of Technology (IUT).
-										I love to learn new things and always
-										open to new opportunities.
+										I love to learn new things and always open to new opportunities.
 									</motion.p>
 									<motion.div
 										className="buttons flex flex-row justify-center items-center space-x-4 mt-10"
@@ -113,14 +111,14 @@ const MyPage = () => {
 									</motion.div>
 								</motion.div>
 								<motion.div
-									className="hidden md:flex col-span-1 mx-auto justify-center items-center "
+									className="hidden md:flex col-span-1 mx-auto justify-center items-center"
 									initial={{ x: 100, opacity: 0 }}
 									whileInView={{ x: 0, opacity: 1 }}
 									transition={{
 										delay: 0.7,
 										type: "spring",
 									}}>
-									<div className="rounded-full h-auto w-auto  lg:px-12 grayscale hover:grayscale-0 transition-all ease duration-300">
+									<div className="rounded-full h-auto w-auto lg:px-12 transition-all ease duration-300">
 										<Image
 											src={Me}
 											width={400}
@@ -135,9 +133,9 @@ const MyPage = () => {
 						</div>
 						<div className="section">
 							<div className="relative md:h-screen w-screen gap-4 flex justify-center items-center flex-col overflow-hidden">
-								<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
+								<div className="z-0 mb-48 md:mb-0 md:absolute top-1/4 md:right-[10%] md:-translate-y-16">
 									<motion.div
-										className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0"
+										className="bg-slate-300 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw]"
 										initial={{
 											x: 300,
 											opacity: 0,
@@ -163,7 +161,7 @@ const MyPage = () => {
 										/>
 									</motion.div>
 								</div>
-								<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
+								<div className="z-10 w-full absolute md:w-auto md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
 									<motion.h1
 										className="bg-white lg:bg-transparent bg-opacity-50 px-3 md-px-0 text-black text-5xl md:text-8xl font-bold"
 										initial={{ x: -100, opacity: 0 }}
