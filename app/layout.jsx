@@ -7,7 +7,7 @@ import Sidebar from "@/components/Sidebar";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "next-themes"; // Ensure this is imported from 'next-themes'
 import "./nprogress.css";
-import Providers from "@/components/providers";
+import Providers from "@/components/Providers";
 
 // FontAwesome configuration
 config.autoAddCss = false;
